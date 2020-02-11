@@ -1,5 +1,5 @@
 const plugin = (hook, vm) => {
-  window.changelogDisplayHandler = function () {
+  window.changelogDisplayHandler = function() {
     const element = document.getElementById('CHANGELOG_RENDERER')
     element.classList.toggle('show')
   }
@@ -9,14 +9,14 @@ const plugin = (hook, vm) => {
   }
   const initiaNavlEl = navEl.outerHTML.split('\n')
 
-  hook.ready(function () {
+  hook.ready(function() {
     // Called when the script starts running, only trigger once, no arguments,
     if (vm.config.changelog !== undefined) {
       loadDoc()
     }
   })
 
-  function renderChangelog (md) {
+  function renderChangelog(md) {
     const html = `<a href="#/" onClick="window.changelogDisplayHandler(); return false;" id="CHANGELOG">CHANGELOG</a>
                 <div id="CHANGELOG_RENDERER">
                   <div class="CL_content">
@@ -39,9 +39,9 @@ const plugin = (hook, vm) => {
     changelogPlaceHolder.innerHTML = changelogContentHTML
   }
 
-  function loadDoc () {
+  function loadDoc() {
     const xhttp = new XMLHttpRequest()
-    xhttp.onreadystatechange = function () {
+    xhttp.onreadystatechange = function() {
       const md = ` ${this.responseText} \n # {docsify-ignore-all} `
       renderChangelog(md)
     }
@@ -51,4 +51,3 @@ const plugin = (hook, vm) => {
 }
 
 window.$docsify.plugins = [].concat(plugin, window.$docsify.plugins)
-module.exports = plugin
