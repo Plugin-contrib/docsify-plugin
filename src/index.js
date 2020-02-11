@@ -4,8 +4,13 @@ const plugin = (hook, vm) => {
     element.classList.toggle('show')
   }
   let navEl = document.querySelector('nav.app-nav')
-  if (navEl === null) {
+  if (typeof navEl === 'null') {
     navEl = document.querySelector('nav')
+    if (typeof navEl === 'null') {
+      console.error(
+        '[Docsify-plugin-changelog] : please enable the nav bar options or add custom nav bar. \n refer the docs for more informations'
+      )
+    }
   }
   const initiaNavlEl = navEl.outerHTML.split('\n')
 
