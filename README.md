@@ -1,4 +1,5 @@
 # docsify-changelog-plugin
+
 This is a docsify plugin to render changelog from given path
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
@@ -9,19 +10,25 @@ This is a docsify plugin to render changelog from given path
 Add the following stylesheet along with your other stylesheets
 
 ```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@0.1.0/dist/style.css"/>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-``` 
+<link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css"
+/>
+<link
+  rel="stylesheet"
+  href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+/>
+```
 
-And add the following script 
+And add the following script
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@0.1.0/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
 ```
 
 ## Configure
 
-In your docsify config object add the following 
+In your docsify config object add the following
 
 ```js
 window.$docsify = {
@@ -31,7 +38,17 @@ changelog : 'CHANGELOG.md' // path of your changelog, it can be remote as well
 }
 ```
 
-### Thanks it, Now enjoy :tada: your changelog integration with docsify 
+And add the following custom nav bar
+
+```html
+<nav></nav>
+```
+
+or you can use the `loadNavbar` option but make sure you have the `_navbar.md` or custom nav-bar source to render the changelog.
+
+> Refer [this](https://docsify.js.org/#/configuration?id=loadnavbar) for more info about `navbar`
+
+### Thanks it, Now enjoy :tada: your changelog integration with docsify
 
 ## Screen Shot
 
@@ -43,7 +60,6 @@ changelog : 'CHANGELOG.md' // path of your changelog, it can be remote as well
 
 </p>
 
-
 ## Contribution Guide
 
 - Clone the repo
@@ -52,9 +68,8 @@ changelog : 'CHANGELOG.md' // path of your changelog, it can be remote as well
   - the `styl -> css` using `styl` CLI
   - Optimize the generated style using `cssnano` and `postcss`
   - Build the javascript using `rollup`
-  - optimize it using `rollup-plugin-terser` 
+  - optimize it using `rollup-plugin-terser`
   - styling rule using `standard`
-
 
 ## Faq
 
@@ -62,8 +77,7 @@ changelog : 'CHANGELOG.md' // path of your changelog, it can be remote as well
 Not yet! soon, I will add the styles to make it responsive
 
 **Will it break `mergeNavbar` options?**
-May be 
+May be
 
 **Can I change the style of the button and the panel?**
 Not yet !, but soon it will be possible using css variable
-

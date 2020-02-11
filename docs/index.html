@@ -20,11 +20,17 @@
     />
   </head>
   <body>
+    <nav></nav>
     <div id="app"></div>
     <script>
       window.$docsify = {
         name: 'docsify-changelog-plugin',
-        repo: ''
+        repo: 'https://github.com/anikethsaha/docsify-changelog-plugin',
+        loadNavbar: true,
+        homePage:
+          'https://raw.githubusercontent.com/anikethsaha/docsify-changelog-plugin/master/README.md',
+        changelog:
+          'https://raw.githubusercontent.com/anikethsaha/docsify-changelog-plugin/master/CHANGELOG.md'
       }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
