@@ -12,9 +12,17 @@
     "optimize:css": "postcss src/style.css -o dist/style.css",
     "postoptimize:css": "del-cli src/style.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "docsify",
+    "plugin",
+    "changelog",
+    "docsify-plugin"
+  ],
+  "author": "anikethsaha <anik220798@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.0",
