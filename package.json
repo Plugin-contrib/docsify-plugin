@@ -1,0 +1,36 @@
+{
+  "name": "docsify-changelog-plugin",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "standard",
+    "prebuild": "del-cli dist ",
+    "build": "npm run build:css && npm run build:js",
+    "build:js": "rollup  --config rollup.config.js",
+    "build:css": "stylus  src/style.styl -o src/style.css && npm run optimize:css",
+    "optimize:css": "postcss src/style.css -o dist/style.css",
+    "postoptimize:css": "del-cli src/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "del-cli": "^3.0.0",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "rollup": "^1.31.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "standard": "^14.3.1",
+    "stylus": "^0.54.7"
+  },
+  "standard": {
+    "ignore": [
+      "dist/*"
+    ],
+    "globals": [
+      "XMLHttpRequest"
+    ]
+  }
+}
