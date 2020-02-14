@@ -1,7 +1,7 @@
 {
   "name": "docsify-top-banner-plugin",
   "version": "0.1.0",
-  "description": "docsify plugin to add top banner for small anouncments or updates",
+  "description": "docsify plugin to add top banner for small announcements or updates",
   "main": "dist/index.js",
   "scripts": {
     "test": "standard",
