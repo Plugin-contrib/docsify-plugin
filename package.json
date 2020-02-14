@@ -1,44 +1,27 @@
 {
-  "name": "docsify-changelog-plugin",
+  "name": "docsify-plugin",
   "version": "0.3.0",
-  "description": "Docsify plugin to add changelog to your docsify site",
+  "private": true,
+  "description": "Collection of plugins made by anikethsaha",
   "main": "dist/index.js",
   "scripts": {
-    "test": "standard",
-    "prebuild": "del-cli dist ",
-    "build": "npm run build:css && npm run build:js",
-    "build:js": "rollup  --config rollup.config.js",
-    "build:css": "stylus  src/style.styl -o src/style.css && npm run optimize:css",
-    "optimize:css": "postcss src/style.css -o dist/style.css",
-    "postoptimize:css": "del-cli src/style.css"
+    "postinstall": "npm run bootstrap",
+    "bootstrap": "lerna bootstrap",
+    "test": " lerna run test",
+    "fixlint": "lerna run fixlint",
+    "build": "lerna run build"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "docsify",
-    "plugin",
-    "changelog",
-    "docsify-plugin"
+    "plugin"
   ],
   "author": "anikethsaha <anik220798@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "lerna": "^3.20.2"
+  },
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "del-cli": "^3.0.0",
-    "postcss": "^7.0.26",
-    "postcss-cli": "^7.1.0",
-    "rollup": "^1.31.0",
-    "rollup-plugin-terser": "^5.2.0",
-    "standard": "^14.3.1",
-    "stylus": "^0.54.7"
-  },
-  "standard": {
-    "ignore": [
-      "dist/*"
-    ],
-    "globals": [
-      "XMLHttpRequest"
-    ]
+    "rollup-plugin-terser": "^5.2.0"
   }
 }
