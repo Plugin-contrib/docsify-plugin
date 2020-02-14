@@ -9,7 +9,8 @@
     "bootstrap": "lerna bootstrap",
     "test": " lerna run test",
     "fixlint": "lerna run fixlint",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "publish": "lerna publish"
   },
   "keywords": [
     "docsify",

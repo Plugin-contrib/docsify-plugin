@@ -32,6 +32,7 @@
       "XMLHttpRequest"
     ]
   },
+  "repository": "anikethsaha/docsify-plugin",
   "devDependencies": {
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.0",
