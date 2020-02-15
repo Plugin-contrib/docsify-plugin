@@ -150,3 +150,14 @@
   margin-left: -1.3em; /* same as padding-left set on li */
   width: 1.3em; /* same as padding-left set on li */
 }
+
+@media screen and (max-width: 768px) {
+  .app-nav {
+    width: 100% !important;
+    margin: auto !important;
+  }
+  #CHANGELOG_RENDERER {
+    left: 0;
+    width: 100%;
+  }
+}
