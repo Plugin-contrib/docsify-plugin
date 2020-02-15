@@ -1,5 +1,5 @@
-function plugin(hook, vm) {
-  hook.ready(function() {
+function plugin (hook, vm) {
+  hook.ready(function () {
     const { topBanner } = vm.config
     if (!topBanner) {
       return
