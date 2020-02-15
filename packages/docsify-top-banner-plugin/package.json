@@ -9,9 +9,7 @@
     "prebuild": "del-cli dist ",
     "build": "npm run build:css && npm run build:js",
     "build:js": "rollup  --config ../../rollup.config.js",
-    "build:css": "stylus  src/style.styl -o src/style.css && npm run optimize:css",
-    "optimize:css": "postcss src/style.css -o dist/style.css --config ../../postcss.config.js",
-    "postoptimize:css": "del-cli src/style.css"
+    "build:css": "postcss src/style.css -o dist/style.css --config ../../postcss.config.js"
   },
   "files": [
     "dist"
@@ -31,13 +29,14 @@
   },
   "repository": "anikethsaha/docsify-plugin",
   "devDependencies": {
+    "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.0",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
+    "postcss-preset-env": "^6.7.0",
     "rollup": "^1.31.1",
     "rollup-plugin-terser": "^5.2.0",
-    "standard": "^14.3.1",
-    "stylus": "^0.54.7"
+    "standard": "^14.3.1"
   }
 }
