@@ -1,0 +1,6 @@
+43 error Error: Command failed: git commit -F C:\Users\ANIX~1.LAP\AppData\Local\Temp\07654d26-41cd-4eac-9346-38b2f01ab71c\lerna-commit.txt
+43 error On branch master
+43 error nothing to commit, working tree clean
+43 error
+43 error     at makeError (H:\docsify-changelog-plugin\node_modules\execa\index.js:174:9)
+43 error     at Promise.all.then.arr (H:\docsify-changelog-plugin\node_modules\execa\index.js:278:16)

@@ -1,0 +1,21 @@
+#TOPBANNER {
+  display: block;
+  height: 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  padding: 0 20px;
+  line-height: 0.1rem;
+  top: 0;
+}
+#TOPBANNER p {
+  margin: auto;
+  height: 100%;
+  padding: 0.5rem 0;
+}
+
+#TOPBANNER a {
+  margin: auto 5px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
