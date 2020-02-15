@@ -1,5 +1,5 @@
-function plugin (hook, vm) {
-  hook.ready(function () {
+function plugin(hook, vm) {
+  hook.ready(function() {
     const { topBanner } = vm.config
     if (!topBanner) {
       return
@@ -11,6 +11,7 @@ function plugin (hook, vm) {
     const linkColor = topBanner.linkColor || textColor
     const textAlign = topBanner.textAlign || 'center'
     const bannerPosition = topBanner.position || 'fixed'
+    const bannerZIndex = topBanner.zIndex || '99'
     // creating the new element
     const bannerElement = document.createElement(defaultTag)
     bannerElement.setAttribute('id', 'TOPBANNER')
@@ -26,6 +27,7 @@ function plugin (hook, vm) {
     contentEl.style.backgroundColor = backgroundColor
     contentEl.style.color = textColor
     contentEl.style.position = bannerPosition
+    contentEl.style.Zindex = bannerZIndex
 
     const contentAnchorEl = document.querySelector(`${defaultTag}#TOPBANNER a`)
     contentAnchorEl.style.color = linkColor

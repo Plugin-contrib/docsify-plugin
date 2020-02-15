@@ -80,6 +80,16 @@ Default : `'#deebff'`
 
 The background color of the banner
 
+### `zIndex`
+
+Type : `String`
+
+Default : `99`
+
+The `z-index` of the banner
+
+> Recommended : Use position `relative` and `zIndex` = `-1` when you have repo config in your docsify
+
 ### `textColor`
 
 Type : `String`

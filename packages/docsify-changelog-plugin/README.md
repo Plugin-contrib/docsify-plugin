@@ -49,13 +49,25 @@ And add the following custom nav bar
 
 ### Thanks it, Now enjoy :tada: your changelog integration with docsify
 
+## New feature from `v0.5.1`
+
+Added a red dot whenever you update the changelog source
+
 ## Screen Shot
 
 <p align="center">
 
-<img alt="ss" src="https://imgur.com/JAr22Ik.png" width="400px" />
+<p>When there is new update in the changelog</p>
+<img alt="ss" src="https://imgur.com/WBy183t.png" width="400px" />
 <br/>
-<img alt="ss" src="https://imgur.com/FGljyYR.png" width="400px" />
+
+<p>When there is no new update in the changelog</p>
+
+<img alt="ss" src="https://imgur.com/0fq6pnu.png" width="400px" />
+<br/>
+
+<p>After clicking the changelog button</p>
+<img alt="ss" src="https://imgur.com/Up8FIVU.png" width="400px" />
 
 </p>
 
