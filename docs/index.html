@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>docsify-changelog-plugin</title>
+    <title>docsify-plugin</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description" />
     <meta
@@ -18,21 +18,72 @@
       rel="stylesheet"
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
+    <link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css"
+/>
   </head>
   <body>
-    <nav></nav>
+    <nav>
+      <ul>
+        <ul><p><a href="#">Home</a></p></ul>
+        <li>
+          <p>
+            packages
+            <ul>
+              <li>
+                <p>
+                  <a href="/#/docsify-changelog-plugin">
+                    docsify-changelog-plugin
+                  </a>
+                </p>
+              </li>
+            <li>
+              <p>
+                <a href="/#/docsify-top-banner-plugin">
+                  docsify-top-banner-plugin
+                </a>
+              </p>
+            </li>
+          </ul>
+          </p>
+        </li>
+      </ul>
+    </nav>
     <div id="app"></div>
     <script>
       window.$docsify = {
-        name: 'docsify-changelog-plugin',
-        repo: 'https://github.com/anikethsaha/docsify-changelog-plugin',
-        loadNavbar: true,
-        homePage:
-          'https://raw.githubusercontent.com/anikethsaha/docsify-changelog-plugin/master/README.md',
+        name: 'docsify-plugin',
+        repo: 'https://github.com/anikethsaha/docsify-plugin',
+        topBanner : {
+          content : ':tada: this is powered by docsify-top-banner-plugin, [try it out](https://github.com/anikethsaha/docsify-plugin)'
+        },
+        alias: {
+          '.*?/docsify-changelog-plugin':
+            'https://raw.githubusercontent.com/anikethsaha/docsify-plugin/master/packages/docsify-changelog-plugin/README.md',
+          '.*?/docsify-top-banner-plugin':
+            'https://raw.githubusercontent.com/anikethsaha/docsify-plugin/master/packages/docsify-top-banner-plugin/README.md'
+        },
+        
         changelog:
-          'https://raw.githubusercontent.com/anikethsaha/docsify-changelog-plugin/master/CHANGELOG.md'
+          'https://raw.githubusercontent.com/anikethsaha/docsify-plugin/master/CHANGELOG.md',
+        plugins: [
+        function(hooks, vm) {
+            hooks.ready(function() {
+              document.querySelector('aside.sidebar').style.display = 'none'
+              document.querySelector('button.sidebar-toggle').style.display =
+                'none'
+              document.querySelector('section.content').style.right = 'unset'
+              document.querySelector('section.content').style.left = 'unset'
+              document.querySelector('section.content').style.position =
+                'relative'
+              document.querySelector('section.content').style.width = '100%'
+            })
+          }
+        ]
       }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   </body>

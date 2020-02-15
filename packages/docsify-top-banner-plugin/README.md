@@ -64,6 +64,14 @@ Default : 'span'
 
 the html tag which will be added in the DOM to render the banner
 
+### `position`
+
+Type : `String`
+
+Default : 'fixed'
+
+This is the banner's CSS `position` property.
+
 ### `backgroundColor`
 
 Type : `String`

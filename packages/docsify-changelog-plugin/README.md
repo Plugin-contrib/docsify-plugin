@@ -33,6 +33,7 @@ In your docsify config object add the following
 ```js
 window.$docsify = {
 ...
+loadNavbar : false, // IMPORTANT
 changelog : 'CHANGELOG.md' // path of your changelog, it can be remote as well
 ...
 }
@@ -44,9 +45,7 @@ And add the following custom nav bar
 <nav></nav>
 ```
 
-or you can use the `loadNavbar` option but make sure you have the `_navbar.md` or custom nav-bar source to render the changelog.
-
-> Refer [this](https://docsify.js.org/#/configuration?id=loadnavbar) for more info about `navbar`
+> Note that `loadNavbar` options should be set to `false` and if you want to extend the navbar to write your own, write it in your `index.html` as `nav` element
 
 ### Thanks it, Now enjoy :tada: your changelog integration with docsify
 

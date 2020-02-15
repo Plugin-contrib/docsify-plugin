@@ -29,7 +29,8 @@
       "dist/*"
     ],
     "globals": [
-      "XMLHttpRequest"
+      "XMLHttpRequest",
+      "localStorage"
     ]
   },
   "repository": "anikethsaha/docsify-plugin",

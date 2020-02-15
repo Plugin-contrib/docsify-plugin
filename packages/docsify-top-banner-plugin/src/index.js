@@ -10,6 +10,7 @@ function plugin (hook, vm) {
     const textColor = topBanner.textColor || '#091E42'
     const linkColor = topBanner.linkColor || textColor
     const textAlign = topBanner.textAlign || 'center'
+    const bannerPosition = topBanner.position || 'fixed'
     // creating the new element
     const bannerElement = document.createElement(defaultTag)
     bannerElement.setAttribute('id', 'TOPBANNER')
@@ -24,6 +25,7 @@ function plugin (hook, vm) {
 
     contentEl.style.backgroundColor = backgroundColor
     contentEl.style.color = textColor
+    contentEl.style.position = bannerPosition
 
     const contentAnchorEl = document.querySelector(`${defaultTag}#TOPBANNER a`)
     contentAnchorEl.style.color = linkColor
