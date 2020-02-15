@@ -1,6 +1,6 @@
 {
   "name": "docsify-changelog-plugin",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Docsify plugin to add changelog to your docsify site",
   "main": "dist/index.js",
   "scripts": {
