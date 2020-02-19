@@ -2,6 +2,11 @@
 
 Docsify Plugins by [Aniketh Saha](https://twitter.com/__ANIX__)
 
+### Donation
+
+<a href="https://www.buymeacoffee.com/eydPs6n" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
+
 ## Packages
 
 | **package**                  | **description**                                                     |
