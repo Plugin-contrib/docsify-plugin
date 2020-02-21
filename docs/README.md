@@ -8,10 +8,10 @@ Docsify Plugins by [Aniketh Saha](https://twitter.com/__ANIX__)
 
 ## Packages
 
-| **package**                                                                                                                  | **description**                                                     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [`docsify-changelog-plugin`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-changelog-plugin)    | Docsify plugin to add changelog to your docsify site                |
-| [`docsify-top-bannner-plugin`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-top-banner-plugin) | docsify plugin to add top banner for small announcements or updates |
+| **package**                  | **description**                                                     |  **Hits**          |
+| ---------------------------- | ------------------------------------------------------------------- |------------| 
+| [`docsify-changelog-plugin`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-changelog-plugin)   | Docsify plugin to add changelog to your docsify site                |  [![](https://data.jsdelivr.com/v1/package/npm/docsify-changelog-plugin/badge)](https://www.jsdelivr.com/package/npm/docsify-changelog-plugin)          | 
+| [`docsify-top-bannner-plugin`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-top-banner-plugin) | docsify plugin to add top banner for small announcements or updates |  [![](https://data.jsdelivr.com/v1/package/npm/docsify-top-banner-plugin/badge)](https://www.jsdelivr.com/package/npm/docsify-top-banner-plugin)          |
 
 ## Contribution
 
