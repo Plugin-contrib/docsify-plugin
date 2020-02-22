@@ -3,7 +3,7 @@ const plugin = (hook, vm) => {
     document.documentElement.classList.add('transition')
     window.setTimeout(() => {
       document.documentElement.classList.remove('transition')
-    }, 1000)
+    }, 800)
   }
   var setColor = ({ background, toggleBtnBg, textColor }) => {
     document.documentElement.style.setProperty(
