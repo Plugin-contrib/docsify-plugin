@@ -1,6 +1,6 @@
 :root {
   --text_color: var(--theme-color);
-  --docsify_dark_mode_bg: #b8c9c1;
+  --docsify_dark_mode_bg: white;
   --docsify_dark_mode_btn: var(--theme-color);
 }
 html,
