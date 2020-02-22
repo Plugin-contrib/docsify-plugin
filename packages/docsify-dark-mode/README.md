@@ -62,6 +62,10 @@ light: {
 
 ### Thanks it, Now enjoy :tada: your dark mode in your docsifysite
 
+## Keeping the state of mode
+
+As of `v0.2.0`, this plugin will keep the state of current mode being used. That means even if the browser is closed and then opened again, this plugin will remember the mode being used last times. It is achieved using `localStorage`
+
 ## Screen Shot
 
 <p align="center">
