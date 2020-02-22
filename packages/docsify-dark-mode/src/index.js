@@ -49,6 +49,7 @@ const plugin = (hook, vm) => {
       setColor(theme[`${currColor}`])
     } else {
       currColor = 'light'
+      setColor(theme.light)
     }
 
     var checkbox = document.querySelector('input[name=mode]')

@@ -6,9 +6,7 @@
 html,
 body,
 main,
-nav,
 .sidebar-toggle,
-.app-nav,
 .sidebar,
 aside {
   background: var(--docsify_dark_mode_bg);
