@@ -10,7 +10,8 @@
     "test": " lerna run test",
     "fixlint": "lerna run fixlint",
     "build": "lerna run build",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "prepublish": "npm  run build"
   },
   "keywords": [
     "docsify",

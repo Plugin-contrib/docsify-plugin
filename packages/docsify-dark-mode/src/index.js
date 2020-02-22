@@ -25,7 +25,7 @@ const plugin = (hook, vm) => {
       textColor: '#b4b4b4'
     },
     light: {
-      background: 'white',
+      background: '#b8c9c1',
       toggleBtnBg: 'var(--theme-color)',
       textColor: 'var(--theme-color)'
     }
