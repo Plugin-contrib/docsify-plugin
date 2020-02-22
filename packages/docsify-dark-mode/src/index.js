@@ -42,7 +42,7 @@ const plugin = (hook, vm) => {
     next(html)
   })
 
-  hook.ready(function() {
+  hook.doneEach(function() {
     var currColor
     if (localStorage.getItem('DOCSIFY_DARK_MODE')) {
       currColor = localStorage.getItem('DOCSIFY_DARK_MODE')
