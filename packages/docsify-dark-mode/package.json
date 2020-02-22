@@ -1,6 +1,6 @@
 {
   "name": "docsify-dark-mode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Enables dark mode for your docsify docs",
   "main": "dist/index.js",
   "scripts": {
