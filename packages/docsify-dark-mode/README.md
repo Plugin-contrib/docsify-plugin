@@ -1,7 +1,7 @@
 # docsify-dark-mode
 
-[![JavaScript Style Guide](https://badgen.net/badge/code%20style/standard/f2a)](https://github.com/standard/standard)
-[![jsDelivr hits (npm)](https://badgen.net/jsdelivr/hits/npm/docsify-dark-mode)](https://www.jsdelivr.com/package/npm/docsify-dark-mode)
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+[![jsDelivr hits (/mo)](https://data.jsdelivr.com/v1/package/npm/docsify-dark-mode/badge)](https://www.jsdelivr.com/package/npm/docsify-dark-mode)
 
 > This is a docsify plugin which enables dark mode for your docsify site
 
