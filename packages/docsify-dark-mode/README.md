@@ -1,25 +1,44 @@
 # docsify-dark-mode
 
-This is docsify plugin which enables dark mode for your docsify site
-
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
-[![](https://data.jsdelivr.com/v1/package/npm/docsify-dark-mode/badge)](https://www.jsdelivr.com/package/npm/docsify-dark-mode)
+[![jsDelivr hits (/mo)](https://data.jsdelivr.com/v1/package/npm/docsify-dark-mode/badge)](https://www.jsdelivr.com/package/npm/docsify-dark-mode)
+
+> This is a docsify plugin which enables dark mode for your docsify site
+
+Table of contents:
+
+- [docsify-dark-mode](#docsify-dark-mode)
+  - [Installation](#installation)
+  - [Configure](#configure)
+    - [Defaults](#defaults)
+    - [Remembering the color mode](#remembering-the-color-mode)
+  - [Screenshots](#screenshots)
+  - [Contributing](#contributing)
 
 ## Installation
 
-Add the following stylesheet along with your other stylesheets
+Add the following stylesheet along with your other stylesheets:
 
 ```html
 <link
   rel="stylesheet"
-  href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.css"
+  href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"
 />
 ```
 
-And add the following script
+And add the following script:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
+```
+
+**⚠️ by default, the color of the toggle is set to `white`. It may make the switch invisible. If that's your case, simply set the `themeColor` in your configuration to whatever color you like:**
+
+```js
+window.$docsify = {
+  // your docsify configuration
+  themeColor: "#42b983" // this is the default 'vue' color
+};
 ```
 
 ## Configure
@@ -28,73 +47,82 @@ In your docsify config object add the following
 
 ```js
 window.$docsify = {
-...
-darkMode : {
-  dark: {
-    background: '',
-    toggleBtnBg: '',
-    textColor: ''
-  },
-  light: {
-    background: '',
-    toggleBtnBg: '',
-    textColor: ''
+  // ...
+  darkMode: {
+    dark: {
+      background: "",
+      toggleBtnBg: "",
+      textColor: ""
+    },
+    light: {
+      background: "",
+      toggleBtnBg: "",
+      textColor: ""
+    }
   }
-}
-...
-}
+  // ...
+};
 ```
 
-## Default options
+### Defaults
 
 ```js
-dark: {
-  background: '#1c2022',
-  toggleBtnBg: '#34495e',
-  textColor: '#b4b4b4'
-},
-light: {
-  background: 'white',
-  toggleBtnBg: 'var(--theme-color)',
-  textColor: 'var(--theme-color)'
-}
+{
+  dark: {
+    background: "#1c2022",
+    toggleBtnBg: "#34495e",
+    textColor: "#b4b4b4"
+  },
+  light: {
+    background: "white",
+    toggleBtnBg: "var(--theme-color)",
+    textColor: "var(--theme-color)"
+  }
+};
 ```
 
-### Thanks it, Now enjoy :tada: your dark mode in your docsifysite
+**That's it, now enjoy 🎉 the dark mode in your docsify site.**
 
-## Keeping the state of mode
+### Remembering the color mode
 
-As of `v0.2.0`, this plugin will keep the state of current mode being used. That means even if the browser is closed and then opened again, this plugin will remember the mode being used last times. It is achieved using `localStorage`
+As of `v0.2.0`, this plugin will remember the color mode set. That means that when the browser is closed and then reopened, the color mode will still be set. This is achieved via `localStorage`
 
-## Screen Shot
+## Screenshots
 
-<p align="center">
+The toggle button in light mode.
 
-<p>Button (in light mode) </p>
-<img alt="ss" src="https://imgur.com/z4jhX61.png" width="40px" />
-<br/>
+![The toggle button in light mode.
+](https://imgur.com/z4jhX61.png)
 
-<p>Button (in dark mode) </p>
+The toggle button in dark mode.
 
-<img alt="ss" src="https://imgur.com/aRVEXAG.png" width="40px" />
-<br/>
+![The toggle button in dark mode.](https://imgur.com/aRVEXAG.png)
 
-<p>docsify page (ligth mode)</p>
-<img alt="ss" src="https://imgur.com/LQtjAXb.png" width="400px" />
+A basic docsify page in ligth mode.
 
-</p>
+![A basic docsify page in ligth mode.](https://imgur.com/LQtjAXb.png)
 
-<p>docsify page (dark mode)</p>
-<img alt="ss" src="https://imgur.com/OJvTbfQ.png" width="400px" />
+A basic docsify page in dark mode.
 
-</p>
+![A basic docsify page in dark mode.](https://imgur.com/OJvTbfQ.png)
 
-## Contribution Guide
+## Contributing
 
-- Clone the repo
-- start editing on `src/index.js` and `src/style.css`
-- The build step using
-  - Optimize the generated style using `cssnano` and `postcss`
-  - Build the javascript using `rollup`
-  - optimize it using `rollup-plugin-terser`
-  - styling rule using `standard`
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/anikethsaha/docsify-plugin.git
+   ```
+2. Install the dependencies for this particular project:
+   ```bash
+   cd ./packages/docsify-dark-mode/src/ && yarn i
+   ```
+3. Start editing the code in `packages/docsify-dark-mode/src/`.
+4. To build the project, run:
+   ```bash
+   yarn run build
+   ```
+   The build steps are:
+   - Optimize the generated style using `cssnano` and `postcss`
+   - Build the javascript using `rollup`
+   - Optimize it using `rollup-plugin-terser`
+   - Fix the code style with `standard`
