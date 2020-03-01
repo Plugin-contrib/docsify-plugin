@@ -1,0 +1,42 @@
+{
+  "name": "docsify-print",
+  "version": "0.1.0",
+  "description": "adds a print button for your docsify site",
+  "main": "dist/index.js",
+  "scripts": {
+    "fixlint": "standard --fix",
+    "test": "standard",
+    "prebuild": "del-cli dist ",
+    "build": "npm run build:css && npm run build:js",
+    "build:js": "rollup  --config ../../rollup.config.js",
+    "build:css": "postcss src/style.css -o dist/style.css --config ../../postcss.config.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "docsify",
+    "plugin",
+    "print",
+    "docsify-plugin"
+  ],
+  "author": "anikethsaha <anik220798@gmail.com>",
+  "license": "MIT",
+  "standard": {
+    "ignore": [
+      "dist/*"
+    ]
+  },
+  "repository": "anikethsaha/docsify-plugin",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "del-cli": "^3.0.0",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "standard": "^14.3.1"
+  }
+}

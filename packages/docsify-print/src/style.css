@@ -1,0 +1,22 @@
+:root {
+  --docsify-print-top: 0;
+  --docsify-print-left: unset;
+  --docsify-print-right: unset;
+  --docsify-print-bottom: unset;
+}
+
+#docsify_print_btn {
+  cursor: pointer;
+  height: 18px;
+  position: absolute;
+  top: var(--docsify-print-top);
+  left: var(--docsify-print-left);
+  right: var(--docsify-print-right);
+  bottom: var(--docsify-print-bottom);
+}
+#docsify_print_btn > svg {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  margin: 0 10px;
+}
