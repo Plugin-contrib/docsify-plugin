@@ -39,7 +39,7 @@ const plugin = (hook, vm) => {
 
     if (isLS && localStorage.getItem(normalizeMD)) {
       // this is an old changelog content. no need to show the RED DOT
-      html = `<a href="#/" onClick="window.changelogDisplayHandler(); return false;" id="CHANGELOG">CHANGELOG</a>
+      html = `<a href="javascript:void(0)" onClick="window.changelogDisplayHandler(); return false;" id="CHANGELOG">CHANGELOG</a>
                 <div id="CHANGELOG_RENDERER">
                   <div class="CL_content">
                     <div class="CL_content-body"></div>
@@ -49,7 +49,7 @@ const plugin = (hook, vm) => {
       // this is new CHangelog content,
       // show the RED DOT
 
-      html = `<a href="#/" onClick="window.changelogDisplayHandler(); return false;" id="CHANGELOG"><i id="CHANGELOG_NOTIFY"></i>  CHANGELOG</a>
+      html = `<a href="javascript:void(0)" onClick="window.changelogDisplayHandler(); return false;" id="CHANGELOG"><i id="CHANGELOG_NOTIFY"></i>  CHANGELOG</a>
                 <div id="CHANGELOG_RENDERER">
                   <div class="CL_content">
                     <div class="CL_content-body"></div>
