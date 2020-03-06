@@ -13,6 +13,11 @@ const plugin = (hook, vm) => {
       elToRemove.remove()
       localStorage.setItem(LS_CONTENT, true)
     }
+    if (document.getElementById("CHANGELOG_RENDERER").classList.contains("show")){
+        window.addEventListener('click', clickoutside);
+    } else {
+        window.removeEventListener('click', clickoutside);
+    };
   }
   let navEl = document.querySelector('nav.app-nav')
   if (navEl === null) {
@@ -81,6 +86,15 @@ const plugin = (hook, vm) => {
     }
     xhttp.open('GET', vm.config.changelog, true)
     xhttp.send()
+  }
+  
+  function clickoutside(e){
+      if (document.getElementById('CHANGELOG_RENDERER').contains(e.target) != true 
+      && document.querySelector('nav').contains(e.target) != true 
+      && document.getElementById("CHANGELOG_RENDERER").classList.contains("show")){
+          document.getElementById("CHANGELOG_RENDERER").classList.remove("show");
+          window.removeEventListener('click', clickoutside);
+      }
   }
 }
 
