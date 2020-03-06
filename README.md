@@ -21,6 +21,8 @@ Docsify Plugins by [Aniketh Saha](https://twitter.com/__ANIX__)
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anikethsaha/docsify-plugin)
+
 #### Guide
 
 - Clone the repo
