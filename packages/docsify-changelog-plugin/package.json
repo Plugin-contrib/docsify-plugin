@@ -21,6 +21,7 @@
     "docsify-plugin"
   ],
   "author": "anikethsaha <anik220798@gmail.com>",
+  "contributor": "BanditTech <thebbandit@gmail.com>",
   "license": "MIT",
   "standard": {
     "ignore": [
