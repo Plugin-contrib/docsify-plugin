@@ -1,166 +1,191 @@
 #CHANGELOG {
   line-height: normal;
   text-decoration: none;
-  color: var(--color-button-text);
-  transition: background 100ms ease-out 0s;
+  color: var(--changelog-button-text);
+  background: var(--changelog-button-background);
+  position: var(--changelog-button-position);
+  right: var(--changelog-button-offset-right);
+  transition: color var(--changelog-button-text-transition);
+  transition: background var(--changelog-button-background-transition);
   border-radius: 4px;
-  padding: 5px;
-  margin: auto;
+  margin: -10px;
+  padding: 10px;
   font-size: unset;
-  padding-left: 10px;
+  font-weight: bold;
 }
 #CHANGELOG_NOTIFY {
   content: '\A';
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--color-button-notify);
+  background: var(--changelog-button-notify);
   display: inline-block;
-  margin-right: 0.2rem;
 }
 #CHANGELOG:hover {
-  /* background: var(--color-button-hover) */
-  filter: brightness(150%)
+  color: var(--changelog-button-text-hover);
+  background: var(--changelog-button-background-hover);
+  filter: brightness(var(--changelog-button-brightness-hover));
+  margin: -10px;
+  padding: 10px;
+  font-weight: bold;
+}
+@media screen and (orientation: landscape) {
+  #CHANGELOG_RENDERER .CL_content-body {
+    width: var(--changelog-window-width);
+    height: var(--changelog-window-height);
+  }
+}
+@media screen and (orientation: portrait) {
+  #CHANGELOG_RENDERER .CL_content-body {
+    width: var(--changelog-window-portrait-width);
+    height: var(--changelog-window-portrait-height);
+  }
 }
 #CHANGELOG_RENDERER {
+  right: var(--changelog-window-offset-right);
   display: none;
-  position: absolute;
-  top: 100%;
-  background: var(--color-background);
-  box-shadow: var(--color-border-shadow-params) var(--color-border-shadow);
-  border-radius: 5px;
-  margin-top: 20px;
-  width: var(--setting-changelog-width);
+  position: var(--changelog-button-position);
+  color: var(--changelog-text-all);
+  background: var(--changelog-window-background);
+  box-shadow: var(--changelog-window-shadow-params) var(--changelog-window-shadow);
+  border-radius: 10px;
+  margin-top: 50px;
   overflow: hidden;
-  border: 1px solid var(--color-border-edge);
-  right: 0;
-  left: auto;
+  border: 4px solid var(--changelog-window-border);
 }
 #CHANGELOG_RENDERER.show {
   display: block;
 }
 #CHANGELOG_RENDERER .CL_content-body {
-  height: var(--setting-changelog-height);
-  padding: 0;
-  overflow: auto;
+  padding: 5px;
   text-align: left;
+  overflow: auto;
+  left:auto;
 }
-
 #CHANGELOG_RENDERER .CL_content-body hr {
-    border-bottom: 2px solid var(--color-border-header-edge);
-    padding: 30px 0px 20px 0px;
-    margin: auto;
+  border-bottom: 2px solid var(--changelog-header-border-edge);
+  padding: 30px 0px 20px 0px;
+  margin: auto;
 }
-
 #CHANGELOG_RENDERER .CL_content-body h1,
 #CHANGELOG_RENDERER .CL_content-body h2,
 #CHANGELOG_RENDERER .CL_content-body h3,
 #CHANGELOG_RENDERER .CL_content-body h4,
 #CHANGELOG_RENDERER .CL_content-body h5,
 #CHANGELOG_RENDERER .CL_content-body h6 {
-    pointer-events: var(--setting-heading-links);
-    display: block;
-    position: relative;
-    margin: auto;
-    padding: 0px 0px 0px 20px;
-    border-bottom: 2px solid var(--color-border-header-edge);
-    border-top: 2px solid var(--color-border-header-edge);
+  display: block;
+  position: relative;
+  margin: auto;
+  padding: 0px 0px 0px 20px;
+  border-bottom: 2px solid var(--changelog-header-border-edge);
+  border-top: 2px solid var(--changelog-header-border-edge);
 }
-
 #CHANGELOG_RENDERER .CL_content-body h1 {
-    background: var(--color-h1-background);
-    font-size: 2rem;
+  background: var(--changelog-header-h1-background);
+  color: var(--changelog-header-h1-text);
+  font-size: var(--changelog-header-h1-size);
 }
-
 #CHANGELOG_RENDERER .CL_content-body h2 {
-    background: var(--color-h2-background);
-    font-size: 2rem;
+  background: var(--changelog-header-h2-background);
+  color: var(--changelog-header-h2-text);
+  font-size: var(--changelog-header-h2-size);
 }
-
 #CHANGELOG_RENDERER .CL_content-body h3 {
-    background: var(--color-h3-background);
-    font-size: 1.5rem;
+  background: var(--changelog-header-h3-background);
+  color: var(--changelog-header-h3-text);
+  font-size: var(--changelog-header-h3-size);
 }
-
 #CHANGELOG_RENDERER .CL_content-body h4 {
-    background: var(--color-h4-background);
-    font-size: 1.2rem;
+  background: var(--changelog-header-h4-background);
+  color: var(--changelog-header-h4-text);
+  font-size: var(--changelog-header-h4-size);
 }
-
-/* Scrollbar Styling */
 #CHANGELOG_RENDERER .CL_content-body::-webkit-scrollbar {
   width: 10px;
 }
-
 #CHANGELOG_RENDERER .CL_content-body::-webkit-scrollbar-track {
-  background-color: var(--color-scroll-track);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: var(--changelog-window-scroll-track);
+    border-radius: 10px
 }
 #CHANGELOG_RENDERER .CL_content-body::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: var(--color-scroll-button);
+  background: var(--changelog-window-scroll-button);
 }
-
 #CHANGELOG_RENDERER .CL_content-body li:before {
-    content: "\f00c";
-    font-family: FontAwesome;
-    display: inline-block;
-    /* margin-left: -1.3em; */
-    width: 1.3em
+  /*"\f0da" fa-caret-right
+    "\f105" fa-angle-right
+    "\f138" fa-chevron-circle-right
+    "\f274" fa-calendar-check-o
+    "\f0c9" fa-bars
+    "\f00c" fa-check
+    "\f0a9" fa-arrow-circle-left 
+    content: "\f00c"; */
+  content: var(--changelog-text-list-icon);
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
 }
-
 #CHANGELOG_RENDERER .CL_content-body li,
 #CHANGELOG_RENDERER .CL_content-body ul {
-    display: block;
-    width: 100%;
-    position: relative;
-    background: var(--color-background);
-    height: auto;
-    padding-left: 1em ;
-    color: var(--color-list-text);
-    max-height: calc(100vh - 61px);
+  display: block;
+  width: 100%;
+  position: relative;
+  height: auto;
+  color: var(--changelog-text-list);
+  background: var(--changelog-text-list-background);
+  max-height: calc(100vh - 61px);
 }
-
 #CHANGELOG_RENDERER .CL_content-body ul {
-    padding-left: 1.3em ;
-    padding-bottom: .3em ;
+  padding-bottom: 0.5em ;
+  padding-left: 1.8em ;
 }
-
+#CHANGELOG_RENDERER .CL_content-body li {
+  padding-bottom: 0em ;
+  padding-left: 1.8em ;
+}
 #CHANGELOG_RENDERER .CL_content-body p {
-    width: 100%;
-    display: block;
-    padding: 5px 20px;
-    background: var(--color-background);
-    position: relative;
-    color: var(--color-p-text);
+  width: 100%;
+  display: block;
+  padding: 5px 20px;
+  position: relative;
+  margin: auto;
+  color: var(--changelog-text-p);
+  background: var(--changelog-text-p-background);
 }
-
 #CHANGELOG_RENDERER .CL_content-body blockquote {
-    font-size: 1.5em;
-    margin-left: 1em;
-    width: 95%;
-    color: var(--color-blockquote-text);
+  font-size: 1.5em;
+  margin-left: 1em;
+  width: 95%;
+  color: var(--changelog-text-blockquote);
+  background: var(--changelog-text-blockquote-background);
 }
-
 #CHANGELOG_RENDERER .CL_content-body strong {
-    font-size: 1.5rem;
-    margin-left: 0em;
-    width: 95%;
-    color: var(--color-strong-text);
-    background: var(--color-strong-background);
+  font-size: 1.5rem;
+  margin-left: 0em;
+  width: 95%;
+  color: var(--changelog-text-strong);
+  background: var(--changelog-text-strong-background);
 }
-
 #CHANGELOG_RENDERER .CL_content-body a {
-    font-size: 1.1em;
-    color: var(--color-a-text);
-    background: var(--color-a-background);
+  font-size: 1.1em;
+  color: var(--changelog-link-text);
+  background: var(--changelog-link-background);
+  text-decoration: inherit;
+  display: inline;
+  transition: background var(--changelog-link-background-transition);
+  transition: color var(--changelog-link-text-transition);
+  font-weight: bold;
 }
-
 #CHANGELOG_RENDERER .CL_content-body a:hover {
-    color: var(--color-a-text);
-    background: var(--color-a-background-hover);
+  color: var(--changelog-link-text-hover);
+  background: var(--changelog-link-background-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--changelog-link-background-hover);
+  transition: background var(--changelog-link-background-transition);
+  transition: color var(--changelog-link-text-transition);
 }
 
 @media screen and (max-width: 768px) {
@@ -175,39 +200,58 @@
 }
 
 :root {
-    --setting-changelog-height: 90vh; /* original 60vh */
-    --setting-changelog-width: 65%; /* original 400px */
+  --changelog-window-height: 60vh;
+  --changelog-window-width: 400px;
+  --changelog-window-background: #FFF;
+  --changelog-window-scroll-track: inherit;
+  --changelog-window-scroll-button: grey;
+  --changelog-window-border: rgba(0, 0, 0, 0.1);
+  --changelog-window-shadow: rgba(0, 0, 0, 0.15);
+  --changelog-window-shadow-params: 0px 0px 24px 5px;
+  --changelog-window-offset-right: 4vw;
 
-    --setting-heading-links: none; /* disables the Heading links auto generated by docsify.*/
+  --changelog-button-notify: orange;
+  --changelog-button-text: goldenrod;
+  --changelog-button-text-hover: darkorange;
+  --changelog-button-text-transition: 1s;
+  --changelog-button-background: inherit;
+  --changelog-button-background-hover: grey;
+  --changelog-button-background-transition: 1s;
+  --changelog-button-brightness-hover: 100%;
+  --changelog-button-position: absolute;
+  --changelog-button-offset-right: 0px;
 
-    --color-button-text: #e78931; /* original unset */
-    --color-button-notify: var(--color-button-text); /* original rgb(232, 68, 68) */
-    --color-button-hover: #582d04; /* original rgb(242, 245, 247) - this is not used when the brightness line is enabled. */
+  /* disables the Heading links auto generated by docsify.*/
+  --changelog-header-auto-links: none;
+  --changelog-header-border-edge: rgba(0, 0, 0, 0.1);
+  --changelog-header-h1-text: inherit;
+  --changelog-header-h1-background: rgba(0, 0, 0, .03);
+  --changelog-header-h1-size: 1.5rem;
+  --changelog-header-h2-text: inherit;
+  --changelog-header-h2-background: inherit;
+  --changelog-header-h2-size: 2rem;
+  --changelog-header-h3-text: inherit;
+  --changelog-header-h3-background: inherit;
+  --changelog-header-h3-size: 24px;
+  --changelog-header-h4-text: inherit;
+  --changelog-header-h4-background: inherit;
+  --changelog-header-h4-size: inherit;
 
-    --color-background: #000000; /* original #fff */
-    --color-background-high: #070707; /* original unset */
+  --changelog-text-all: black;
+  --changelog-text-strong: inherit;
+  --changelog-text-strong-background: silver;
+  --changelog-text-p: #ecfd00e0;
+  --changelog-text-p: darkred;
+  --changelog-text-p-background: inherit;
+  --changelog-text-blockquote: inherit;
+  --changelog-text-blockquote-background: inherit;
+  --changelog-text-list: inherit;
+  --changelog-text-list-background: inherit;
 
-    --color-scroll-track: #000000; /* original rgba(0, 0, 0, 0.03) */
-    --color-scroll-button: #6d6d6d; /* originals #6d6d6d */
-
-    --color-border-edge: #000000; /* original rgba(0, 0, 0, 0.1) */
-    --color-border-shadow: #000000; /* original rgba(0, 0, 0, 0.15) */
-    --color-border-shadow-params: 0px 0px 50px 23px; /* original rgba(0, 0, 0, 0.15) */
-    --color-border-header-edge: var(--color-button-text); /* original rgba(0, 0, 0, 0.1) */
-
-    --color-strong-text: #e6c409; /* original unset */
-    --color-strong-background: #462200; /* #462200;  original unset */
-
-    --color-list-text: #80e42e; /* original Unset */
-    --color-p-text: var(--color-button-text); /* original Unset */
-    --color-blockquote-text: var(--color-strong-text); /* original unset */
-
-    --color-a-text: var(--color-strong-text); /* original unset */
-    --color-a-background: var(--color-background-high); /* original unset */
-    --color-a-background-hover: #6868687a; /* original unset */
-
-    --color-h1-background: var(--color-background-high); /* original rgba(0, 0, 0, .03) */
-    --color-h2-background: var(--color-background-high); /* original rgba(0, 0, 0, .03) */
-    --color-h3-background: var(--color-background-high); /* original rgba(0, 0, 0, .03) */
-    --color-h4-background: var(--color-background-high); /* original rgba(0, 0, 0, .03) */
+  --changelog-link-text: inherit;
+  --changelog-link-text-hover: orange;
+  --changelog-link-text-transition: 0.5s;
+  --changelog-link-background: inherit;
+  --changelog-link-background-hover: inherit;
+  --changelog-link-background-transition: 0.5s;
 }
