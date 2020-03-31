@@ -1,6 +1,6 @@
 {
   "name": "docsify-print",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha.0",
   "description": "adds a print button for your docsify site",
   "main": "dist/index.js",
   "scripts": {
