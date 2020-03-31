@@ -1,6 +1,6 @@
 # docsify-print
 
-This is docsify plugin which enables dark mode for your docsify site
+This is a docsify plugin which adds a print button to your docsify site
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 [![](https://data.jsdelivr.com/v1/package/npm/docsify-print/badge)](https://www.jsdelivr.com/package/npm/docsify-print)
