@@ -1,0 +1,38 @@
+{
+  "name": "docsify-enhanced-theme",
+  "version": "0.1.0",
+  "description": "a bit of enhancement over the default docsify theme",
+  "main": "dist/style.css",
+  "scripts": {
+    "fixlint": "standard --fix",
+    "test": "standard",
+    "prebuild": "del-cli dist ",
+    "build": "postcss src/style.css -o dist/style.css --config ../../postcss.config.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "docsify",
+    "plugin",
+    "print",
+    "docsify-plugin"
+  ],
+  "author": "anikethsaha <anik220798@gmail.com>",
+  "license": "MIT",
+  "standard": {
+    "ignore": [
+      "dist/*"
+    ]
+  },
+  "repository": "anikethsaha/docsify-plugin",
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
+    "del-cli": "^3.0.0",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "standard": "^14.3.1"
+  }
+}

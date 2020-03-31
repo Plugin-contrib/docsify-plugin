@@ -8,12 +8,13 @@ Docsify Plugins by [Aniketh Saha](https://twitter.com/__ANIX__)
 
 ## Packages
 
-| **package**                                                                                                                  | **description**                                                             | **Hits**                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`docsify-changelog-plugin`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-changelog-plugin)    | Docsify plugin to add changelog to your docsify site                        | [![](https://data.jsdelivr.com/v1/package/npm/docsify-changelog-plugin/badge)](https://www.jsdelivr.com/package/npm/docsify-changelog-plugin)   |
-| [`docsify-top-bannner-plugin`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-top-banner-plugin) | docsify plugin to add top banner for small announcements or updates         | [![](https://data.jsdelivr.com/v1/package/npm/docsify-top-banner-plugin/badge)](https://www.jsdelivr.com/package/npm/docsify-top-banner-plugin) |
-| [`docsify-dark-mode`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-dark-mode)                  | docsify plugin to add dark mode button and integration in your docsify site | [![](https://data.jsdelivr.com/v1/package/npm/docsify-dark-mode/badge)](https://www.jsdelivr.com/package/npm/docsify-dark-mode)                 |
-| [`docsify-print`](https://github.com/anikethsaha/docsify-plugin/tree/master/packages/docsify-print)                          | docsify plugin to add dark mode button and integration in your docsify site | [![](https://data.jsdelivr.com/v1/package/npm/docsify-print/badge)](https://www.jsdelivr.com/package/npm/docsify-print)                         |
+| **package**                  | **description**                                                     | **Hits**                                                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `docsify-changelog-plugin`   | Docsify plugin to add changelog to your docsify site                | [![](https://data.jsdelivr.com/v1/package/npm/docsify-changelog-plugin/badge)](https://www.jsdelivr.com/package/npm/docsify-changelog-plugin)   |
+| `docsify-top-bannner-plugin` | Docsify plugin to add top banner for small announcements or updates | [![](https://data.jsdelivr.com/v1/package/npm/docsify-top-banner-plugin/badge)](https://www.jsdelivr.com/package/npm/docsify-top-banner-plugin) |
+| `docsify-dark-mode`          | Docsify plugin to add dark mode in your docsify site                | [![](https://data.jsdelivr.com/v1/package/npm/docsify-dark-mode/badge)](https://www.jsdelivr.com/package/npm/docsify-dark-mode)                 |
+| `docsify-print`              | Docsify plugin to add a print button in your docsify site           | [![](https://data.jsdelivr.com/v1/package/npm/docsify-print/badge)](https://www.jsdelivr.com/package/npm/docsify-print)                         |
+| `docsify-enhanced-theme`     | Docsify plugin to add a print button in your docsify site           | [![](https://data.jsdelivr.com/v1/package/npm/docsify-enhanced-theme/badge)](https://www.jsdelivr.com/package/npm/docsify-enhanced-theme)       |
 
 ## Contribution
 
@@ -23,13 +24,12 @@ Docsify Plugins by [Aniketh Saha](https://twitter.com/__ANIX__)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anikethsaha/docsify-plugin)
 
-
 #### Guide
 
 - Clone the repo
 - `yarn`
 - `cd packages/<packages-name>`
-- start editing on `src/index.js` and `src/style.styl`
+- start editing on `src/index.js` and `src/style.css`
 - The build step using
   - the `styl -> css` using `styl` CLI
   - Optimize the generated style using `cssnano` and `postcss`

@@ -36,7 +36,7 @@ css var used with default values are
 --docsify-print-bottom: unset;
 ```
 
-### Thanks it, Now enjoy :tada: your dark mode in your docsifysite
+### Thats it, Now enjoy :tada: your dark mode in your docsifysite
 
 ## Screen Shot
 
