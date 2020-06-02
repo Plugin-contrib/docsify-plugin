@@ -53,6 +53,10 @@ const plugin = (hook, vm) => {
     }
 
     var checkbox = document.querySelector('input[name=mode]')
+    
+    if (!checkbox) {
+      return
+    }
 
     checkbox.addEventListener('change', function() {
       // dark
