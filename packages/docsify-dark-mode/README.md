@@ -52,12 +52,14 @@ window.$docsify = {
     dark: {
       background: "",
       toggleBtnBg: "",
-      textColor: ""
+      textColor: "",
+      codeColor: ""
     },
     light: {
       background: "",
       toggleBtnBg: "",
-      textColor: ""
+      textColor: "",
+      codeColor: ""
     }
   }
   // ...
@@ -71,12 +73,14 @@ window.$docsify = {
   dark: {
     background: "#1c2022",
     toggleBtnBg: "#34495e",
-    textColor: "#b4b4b4"
+    textColor: "#b4b4b4",
+    codeColor: "#3f484d"
   },
   light: {
     background: "white",
     toggleBtnBg: "var(--theme-color)",
-    textColor: "var(--theme-color)"
+    textColor: "var(--theme-color)",
+    codeColor: "white"
   }
 };
 ```
